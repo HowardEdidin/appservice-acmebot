@@ -26,10 +26,8 @@ namespace AppService.Acmebot
     {
         public Startup()
         {
-            var config = new ConfigurationBuilder()
-                .AddEnvironmentVariables();
-
-            Configuration = config.Build();
+            Configuration = new ConfigurationBuilder().AddEnvironmentVariables()
+                                                      .Build();
         }
 
         public IConfiguration Configuration { get; }
